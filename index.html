@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaapkaro</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+   
+    <header>Jaap Karo</header>
+
+    <div class="counter">
+    <h2 class="countheading">count</h2>
+    <span id="count" class="countdisplay">0</span>
+    </div> 
+    <div ontouchstart="">
+        <div class="button">
+          <a href="#" id="clickme">Press Me</a>
+        </div>
+      </div>
+
+      <div ontouchstart="">
+        <div class="button" class="button1">
+          <a href="#" id="reset">reset</a>
+        </div>
+      </div>
+
+          
+
+</body>
+<script>
+
+// var button = document.getElementById("clickme"),count = 0;
+// button.onclick = function() {
+//   count += 1;
+//   document.getElementById("count").innerHTML = count;
+// };
+
+let counter = 0;
+  
+const counterv = document.getElementById('count');
+const clickme = document.getElementById('clickme');
+
+const resetBtn = document.querySelector('#reset');
+  
+// To increment the value of counter
+clickme.addEventListener('click', () => {
+    counter++;
+    counterv.innerHTML = counter;
+});
+  
+
+  
+// To reset the counter to zero
+resetBtn.addEventListener('click', reset);
+  
+function reset() {
+    counter = 0;
+    counterv.innerHTML = counter;
+}
+
+
+
+
+</script>
+</html>
